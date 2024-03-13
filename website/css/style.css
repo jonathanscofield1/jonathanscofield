@@ -1,0 +1,151 @@
+nav {
+  background-image: linear-gradient(rgb(99, 184, 115), rgb(63, 161, 153));
+}
+
+h2 {
+  margin: 50px;
+}
+
+article {
+  margin: 50px;
+}
+
+strong {
+  background-image: linear-gradient(rgb(99, 184, 115), rgb(63, 161, 153));
+  margin-right: auto;
+}
+
+pre code {
+  background-color: black;
+  color: white;
+  padding: 50px;
+}
+
+img.headshot {
+  margin: 25px;
+}
+
+.break {
+  border-bottom: 3px solid #ddd;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.custom-button {
+  background-image: linear-gradient(rgb(99, 184, 115), rgb(63, 161, 153));
+}
+
+/* Fonts*/
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+/************/
+
+.nav-image {
+  width: 25px;
+  height: 25px;
+}
+
+#logo {
+  max-height: 50%;
+  max-width: 50%;
+}
+
+
+.float-start {
+  max-height: 400px;
+  max-width: 400px;
+}
+
+.nav-item:hover {
+  background-color: #dddfe2;
+}
+
+
+/* Animations */
+.typewriter.section-header {
+  overflow: hidden;
+
+  white-space: nowrap;
+  max-width: 40%;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  animation:
+    typing 5s steps(40, end);
+}
+
+@keyframes typing {
+  from {
+    width: 0
+  }
+
+  to {
+    width: 100%
+  }
+}
+
+.blinking-span {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+.project-title {
+  background-image: linear-gradient(rgb(99, 184, 115), rgb(63, 161, 153));
+  margin-right: auto;
+}
+

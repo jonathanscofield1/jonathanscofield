@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My Simple Webpage</title>
+</head>
+<body>
+  <div id="Article1">
+    AWS Redshift has a special command called <a
+      href="https://docs.aws.amazon.com/redshift/latest/dg/r_UNLOAD.html"><b>UNLOAD</b></a> that allows
+    you to export the result of a query to an S3 file. While you can download small query results directly
+    from Query Editor v2, Redshift limits the number of rows that can be exported to 5 MB or 100,000 rows per the <a
+      href="https://docs.aws.amazon.com/redshift/latest/mgmt/query-editor-v2-using.html">docs</a>.
+    This is fine for most queries, but there are times when you need to move a large amount of data from Redshift
+    to file (a DB migration, for instance), and it is generally faster to keep the data within the AWS ecosystem than it is to use an API. In such
+    situations, <b>UNLOAD</b>
+    is often the best solution.<br><br> <b>UNLOAD</b> has a simple syntax consisting of a query string and some
+    additional format parameters, but formatting text
+    literals is problematic because the SQL query must be enclosed in single quotes. To circumvent
+    this issue, I used two other Redshift functions, <b>SUBSTRING</b> and <b>QUOTE_LITERAL</b>. <b>SUBSTRING</b> uses
+    the following syntax:<br><br><b>(<em>character_string</em> FROM <em> start_position</em> [ FOR <em>
+        number_characters </em>])</b><br><br>
+    <b>QUOTE_LITERAL</b> returns a single quoted string from text. By combining these two functions, I was able to make
+    'USD' the default currency for a "Currency" field in my query string within an UNLOAD function call.<br><br>
+    <pre><code>CASE WHEN currency_field IS NULL THEN SUBSTRING(QUOTE_LITERAL(''USD''),2,3) ELSE currency_field END AS Currency</code></pre>
+  </div>
+</body>
+</html>
